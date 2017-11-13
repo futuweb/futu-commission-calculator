@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <h3>测试结果：</h3>
+    <h4>港股：</h4>
+    <div id="result">
+
+    </div>
+    <h4>美股：</h4>
+    <div id="result2">
+
+    </div>
+    <script src="../dist/index.js"></script>
+    <script>
+        var tencentConfig = {
+            stockCode: '00700',
+            market:1,
+            price:377,
+            shareNum: 100,
+            instrument:0,
+            free:true
+        };
+        var babaConfig = {
+            stockCode: 'BABA',
+            market:2,
+            price:200,
+            shareNum: 100,
+            free: false
+        };
+
+        let tencent = calculator(tencentConfig);
+        let baba = calculator(babaConfig,'hk');
+
+        console.log('富途港股收费：' , tencent.futu , tencent.brokers);
+        console.log('富途美股收费：' , baba.futu , baba.brokers);
+        document.getElementById('result').innerHTML = JSON.stringify(tencent.brokers);
+        document.getElementById('result2').innerHTML = JSON.stringify(baba.brokers);
+    </script>
+</body>
+</html>
