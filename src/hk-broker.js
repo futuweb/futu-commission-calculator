@@ -115,6 +115,8 @@ module.exports = class HKBroker{
     /**
      * [getTotalCost 获取手续总费用]
      * @param  {[number]} cost [总金额]
+     * @param  {[number]} free [免佣]
+     * @param  {[number]} instrument [正股|窝轮]
      * @return {[number]}      [手续总费用]
      */
     getTotalCost(cost , free , instrument){
