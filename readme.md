@@ -1,6 +1,12 @@
 # futu commission calculator（富途港美股佣金计算器）
 富途佣金计算器默认会给出几个默认券商的佣金的佣金对比方案。
 
+## import
+
+```
+npm install -save futu-commission-calculator
+```
+
 ## Use
 
 ```js
