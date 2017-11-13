@@ -16,7 +16,7 @@
 
     h. 计算总费用
         h.1: 股票类型 === 窝轮(不需要交 g项印花税)
-            return a+b+c+d+f+g;
+            return a+b+c+d+e+f;
         h.2:
             return a+b+c+d+e+f+g;
 ```
