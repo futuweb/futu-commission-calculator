@@ -1,7 +1,7 @@
 # futu commission calculator（富途港美股佣金计算器）
-富途佣金计算器默认会给出几个默认券商的佣金的佣金对比方案。
+富途佣金计算器默认会给出几个券商的佣金结果对比。
 
-## import
+## npm install
 
 ```
 npm install -save futu-commission-calculator
@@ -36,14 +36,16 @@ console.log('富途美股收费：' , baba.futu , baba.brokers);
 ```
 
 
-## calculator(stock , config , lang)
+## calculator(stock [, config , lang])
 * stock 股票配置文件
 * config 自定义券商收费标准
 * lang  语言环境  默认：大陆 ， 支持香港
 
 
-### stockConfig
+### stock
 根据输入的股票进行佣金计算。
+
+参数如下：
 
 ```
 stockCode = stock.stockCode; //股票code
@@ -58,7 +60,7 @@ cost = price * this.shareNum; //总费用
 ### config
 券商佣金方案的配置
 
-#### HK
+#### 港股参数列表
 
 ```js
 this.name = options.name || 'unkown';         //券商名称
@@ -90,7 +92,7 @@ this.transactionLevyRate = options.transactionLevyRate || 0;//交易征费比例
 this.minTransactionLevyFee = options.minTransactionLevyFee || 0; //最少交易征费
 ```
 
-#### US
+#### 美股参数列表
 
 ```js
 this.name = options.name || 'unkown';         //券商名称
@@ -125,7 +127,7 @@ this.minActivityFee = options.minActivityFee || 0; //最少交易活动费
 this.maxActivityFee = options.maxActivityFee || Infinity;//最多交易活动费
 ```
 
-## 文档
+## 计算文档
 
 [【港股】](./docs/hk-calc.md)
 
