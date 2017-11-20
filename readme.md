@@ -4,7 +4,7 @@
 ## npm install
 
 ```
-npm install -save futu-commission-calculator
+npm install --save futu-commission-calculator
 ```
 
 ## Use
