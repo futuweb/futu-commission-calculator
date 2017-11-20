@@ -133,3 +133,5 @@ this.maxActivityFee = options.maxActivityFee || Infinity;//最多交易活动费
 
 [【美股】](./docs/us-calc.md)
 
+
+## browser export >= ie9
