@@ -92,8 +92,8 @@ module.exports = class Calculator{
      * @return {[object]}        [总手续费对象]
      */
     getTotalCostSource(broker){
-        return  this.market !== 1 ? broker.getTotalCostInfo(this.cost , this.shareNum , this.price , this.free)
-                                    : broker.getTotalCostInfo(this.cost , this.free , this.instrument);
+        return  this.market !== 1 ? broker.getTotalCostSource(this.cost , this.shareNum , this.price , this.free)
+                                    : broker.getTotalCostSource(this.cost , this.free , this.instrument);
     }
     /**
      * [getBrokerConfigBySpell 根据spell获取券商]
