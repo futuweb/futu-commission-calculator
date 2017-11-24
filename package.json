@@ -1,6 +1,6 @@
 {
   "name": "futu-commission-calculator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "futu commission calculator (富途佣金计算器)",
   "main": "./dist/index.js",
   "directories": {

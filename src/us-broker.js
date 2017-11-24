@@ -105,6 +105,23 @@ module.exports = class USBroker{
      */
     getTotalCostInfo(cost , shareNum , price , free){
         return {
+            commission: +(this.getCommission(cost , shareNum , price , free).toFixed(2)),
+            platform: +(this.getPlatform(cost , shareNum).toFixed(2)),
+            payFee: +(this.getPayFee(cost , shareNum).toFixed(2)),
+            secFee: +(this.getSecFee(cost).toFixed(2)),
+            activityFee: +(this.getActivityFee(shareNum).toFixed(2))
+        };
+    }
+    /**
+     * [getTotalCostSource 获取总费用元素数据]
+     * @param  {[number]} cost     [总金额]
+     * @param  {[number]} shareNum [股数]
+     * @param  {[number]} price    [股价]
+     * @param  {[number]} free     [免佣？]
+     * @return {[number]}          [总费用对象]
+     */
+    getTotalCostSource(cost , shareNum , price , free){
+        return {
             commission: this.getCommission(cost , shareNum , price , free),
             platform: this.getPlatform(cost , shareNum),
             payFee: this.getPayFee(cost , shareNum),
@@ -123,6 +140,6 @@ module.exports = class USBroker{
     getTotalCost(cost , shareNum , price , free){
         let totalCostInfo = this.getTotalCostInfo(cost , shareNum , price , free);
         //只算佣金和交收费
-        return totalCostInfo.commission + totalCostInfo.payFee;
+        return +(totalCostInfo.commission.toFixed(2)) + (+(totalCostInfo.payFee.toFixed(2)));
     }
 };

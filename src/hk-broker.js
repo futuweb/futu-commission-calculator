@@ -99,9 +99,29 @@ module.exports = class HKBroker{
     /**
      * [getTotalCostInfo 获取总费用信息]
      * @param  {[number]} cost [总金额]
+     * @param  {[number]} free [免佣]
+     * @param  {[number]} instrument [正股|窝轮]
      * @return {[number]}      [总费用对象]
      */
     getTotalCostInfo(cost , free , instrument){
+        return {
+            commission: +(this.getCommission(cost , free).toFixed(2)),
+            platform: +(this.getPlatform().toFixed(2)),
+            payFee: +(this.getPayFee(cost).toFixed(2)),
+            tradingSystem: +(this.getTradingSystem().toFixed(2)),
+            stampDuty: +(this.getStampDuty(cost , instrument).toFixed(2)),
+            tradeFee: +(this.getTradeFee(cost).toFixed(2)),
+            transactionLevy: +(this.getTransactionLevy(cost).toFixed(2))
+        };
+    }
+    /**
+     * [getTotalCostSource 获取总费用原始信息]
+     * @param  {[number]} cost [总金额]
+     * @param  {[number]} free [免佣]
+     * @param  {[number]} instrument [正股|窝轮]
+     * @return {[number]}      [总费用对象]
+     */
+    getTotalCostSource(cost , free , instrument){
         return {
             commission: this.getCommission(cost , free),
             platform: this.getPlatform(),
@@ -124,8 +144,8 @@ module.exports = class HKBroker{
         let totalCost = 0;
 
         for ( let costName in totalCostInfo ){
-            totalCost += totalCostInfo[costName];
+            totalCost += +((totalCostInfo[costName]).toFixed(2));
         }
-        return totalCost;
+        return +(totalCost.toFixed(2));
     }
 };

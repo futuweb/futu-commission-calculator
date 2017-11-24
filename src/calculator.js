@@ -63,6 +63,7 @@ module.exports = class Calculator{
                 broker: brokerList[i],
                 totalCost: this.getTotalCost(brokerList[i]),
                 totalCostInfo: this.getTotalCostInfo(brokerList[i]),
+                totalCostSource: this.getTotalCostSource(brokerList[i])
             });
         }
         return Object.assign({} , brokerInfo);
@@ -82,6 +83,15 @@ module.exports = class Calculator{
      * @return {[object]}        [总手续费对象]
      */
     getTotalCostInfo(broker){
+        return  this.market !== 1 ? broker.getTotalCostInfo(this.cost , this.shareNum , this.price , this.free)
+                                    : broker.getTotalCostInfo(this.cost , this.free , this.instrument);
+    }
+    /**
+     * [getTotalCostSource 获取费用原始数据]
+     * @param  {[object]} broker [券商]
+     * @return {[object]}        [总手续费对象]
+     */
+    getTotalCostSource(broker){
         return  this.market !== 1 ? broker.getTotalCostInfo(this.cost , this.shareNum , this.price , this.free)
                                     : broker.getTotalCostInfo(this.cost , this.free , this.instrument);
     }
