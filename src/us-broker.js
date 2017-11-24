@@ -54,7 +54,7 @@ module.exports = class USBroker{
         if ( this.minStockPrice > 0 && price < this.minStockPrice){
             commission += shareNum * this.paddingCommission;
         }
-        return free ? 0 : Math.min(this.maxCommission , this.maxCommissionRate * cost , commission);
+        return free ? 0 : Math.max(this.minCommission , Math.min(this.maxCommission , this.maxCommissionRate * cost , commission));
     }
     /**
      * [getPlatform 获取平台使用费]
@@ -64,7 +64,7 @@ module.exports = class USBroker{
      */
     getPlatform(cost , shareNum){
         let platformFee = Math.max(this.platformFee , this.platformFeeRate * shareNum , this.minPlatformFee);
-        return Math.min(this.maxPlatformFeeRate * cost , platformFee);
+        return Math.max(this.minPlatformFee , Math.min(this.maxPlatformFeeRate * cost , platformFee));
     }
     /**
      * [getPayFee 获取交收费]

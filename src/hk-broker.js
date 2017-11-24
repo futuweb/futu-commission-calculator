@@ -46,7 +46,7 @@ module.exports = class HKBroker{
      */
     getCommission(cost , free){
         let commission = Math.max(this.commissionRate * cost , this.minCommission);
-        return free ? 0 : Math.min(this.maxCommission , this.maxCommissionRate * cost , commission);
+        return free ? 0 : Math.max(this.minCommission , Math.min(this.maxCommission , this.maxCommissionRate * cost , commission));
     }
     /**
      * [platform 获取平台使用费]
