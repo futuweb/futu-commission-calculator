@@ -125,8 +125,8 @@ module.exports = function(lang) {
         name:names.guotaijunan.name,    //券商名称
         spell:'GuotaiJunan', //券商拼写
         packageList:[{
-            commissionRate:0.002,//佣金费用比例
-            minCommission:20,  //最少交易佣金
+            commissionRate:0.0015,//佣金费用比例
+            minCommission:15,  //最少交易佣金
             commissionNeedPrice: true, //计算佣金是否要*股价
 
             secFeeRate:0.0000231, //证监会费比例
