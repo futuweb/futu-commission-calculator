@@ -28,5 +28,9 @@
     "webpack": "^3.5.5"
   },
   "author": "Yi-love",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/futuweb/futu-commission-calculator#readme",
+  "bugs": {
+    "url": "https://github.com/futuweb/futu-commission-calculator/issues"
+  }
 }
