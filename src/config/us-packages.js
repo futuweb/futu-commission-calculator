@@ -16,8 +16,8 @@ module.exports = function(lang) {
             fs:{
                 name:'第一证券'
             },
-            scott:{
-                name:'史考特'
+            td:{
+                name:'TD(含史考特)'
             },
             tiger:{
                 name:'老虎证券'
@@ -37,8 +37,8 @@ module.exports = function(lang) {
             fs:{
                 name:'第一證券'
             },
-            scott:{
-                name:'史考特'
+            td:{
+                name:'TD(含史考特)'
             },
             tiger:{
                 name:'老虎證券'
@@ -110,8 +110,9 @@ module.exports = function(lang) {
         name:names.boci.name,    //券商名称
         spell:'BOCI',      //券商拼写
         packageList:[{
-            commissionRate:0.0012,//佣金费用比例
-            minCommission:20,  //最少交易佣金
+            commissionRate:0.01,//佣金费用比例
+            minCommission:25,  //最少交易佣金
+            commissionNeedPrice: true, //计算佣金是否要*股价
 
             secFeeRate:0.0000231, //证监会费比例
             minSecFee:0.01,//最低证监会费
@@ -124,8 +125,9 @@ module.exports = function(lang) {
         name:names.guotaijunan.name,    //券商名称
         spell:'GuotaiJunan', //券商拼写
         packageList:[{
-            commissionRate:0.0012,//佣金费用比例
+            commissionRate:0.002,//佣金费用比例
             minCommission:20,  //最少交易佣金
+            commissionNeedPrice: true, //计算佣金是否要*股价
 
             secFeeRate:0.0000231, //证监会费比例
             minSecFee:0.01,//最低证监会费
@@ -150,8 +152,8 @@ module.exports = function(lang) {
             maxActivityFee:5.59  //最多交易活动费
         }]
     },{
-        name:names.scott.name,    //券商名称
-        spell:'Scott',      //券商拼写
+        name:names.td.name,    //券商名称
+        spell:'TD',      //券商拼写
         packageList:[{
             minCommission:6.95,  //最少交易佣金
 

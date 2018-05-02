@@ -10,11 +10,11 @@ module.exports = class HKBroker{
      * @return {[object]}         [港股券商对象]
      */
     constructor(options){
-        this.name = options.name || 'unkown';         //券商名称
-        this.spell = options.spell || 'unkown';       //券商拼写
+        this.name = options.name || 'unkonw';         //券商名称
+        this.spell = options.spell || 'unkonw';       //券商拼写
 
         this.packageId = options.packageId || 0;      //套餐Id
-        this.packageName = options.packageName || 'unkown';//套餐名称
+        this.packageName = options.packageName || 'unkonw';//套餐名称
 
         this.commissionRate = options.commissionRate || 0;//佣金费用比例
         this.minCommission = options.minCommission || 0;  //最少佣金

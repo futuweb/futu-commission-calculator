@@ -108,6 +108,7 @@ this.commissionRate = options.commissionRate || 0;//佣金费用比例
 this.minCommission = options.minCommission || 0;  //最少佣金
 this.maxCommission = options.maxCommission || Infinity;//最多佣金
 this.maxCommissionRate = options.maxCommissionRate || Infinity;//最多佣金
+this.commissionNeedPrice = options.commissionNeedPrice || false;//计算佣金是否要*股价
 
 this.platformFee = options.platformFee || 0;        //平台使用费
 this.platformFeeRate = options.platformFeeRate || 0;        //平台使用费

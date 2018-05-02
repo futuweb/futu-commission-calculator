@@ -10,11 +10,11 @@ module.exports = class USBroker{
      * @return {[object]}         [美股券商对象]
      */
     constructor(options){
-        this.name = options.name || 'unkown';         //券商名称
-        this.spell = options.spell || 'unkown';       //券商拼写
+        this.name = options.name || 'unkonw';         //券商名称
+        this.spell = options.spell || 'unkonw';       //券商拼写
 
         this.packageId = options.packageId || 0;      //套餐Id
-        this.packageName = options.packageName || 'unkown';//套餐名称
+        this.packageName = options.packageName || 'unkonw';//套餐名称
 
         this.minStockPrice = options.minStockPrice || 0; //最低价格
         this.paddingCommission = options.paddingCommission || 0;//附加钱
@@ -23,6 +23,7 @@ module.exports = class USBroker{
         this.minCommission = options.minCommission || 0;  //最少佣金
         this.maxCommission = options.maxCommission || Infinity;//最多佣金
         this.maxCommissionRate = options.maxCommissionRate || Infinity;//最多佣金
+        this.commissionNeedPrice = options.commissionNeedPrice || false;//计算佣金是否要*股价
 
         this.platformFee = options.platformFee || 0;        //平台使用费
         this.platformFeeRate = options.platformFeeRate || 0;        //平台使用费
@@ -50,7 +51,7 @@ module.exports = class USBroker{
      * @return {[number]}          [交易佣金]
      */
     getCommission(cost , shareNum , price , free){
-        let commission = Math.max(this.commissionRate * shareNum , this.minCommission);
+        let commission = Math.max(this.commissionRate * shareNum * ( this.commissionNeedPrice ? price : 1), this.minCommission);
         if ( this.minStockPrice > 0 && price < this.minStockPrice){
             commission += shareNum * this.paddingCommission;
         }
