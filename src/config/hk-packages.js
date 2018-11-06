@@ -43,6 +43,27 @@ module.exports = function( lang ){
             icbc:{
                 name:'工銀亞洲'
             }
+        },
+        us: {
+            futu: {
+                name: 'FUTU',
+                packageList: ['Old Package', 'Package One', 'Package Two']
+            },
+            boci: {
+                name: 'BOCI',
+            },
+            guotaijunan: {
+                name: 'GuotaiJunan',
+            },
+            cms: {
+                name: 'CMS'
+            },
+            guoxin: {
+                name: 'Guoxin'
+            },
+            icbc: {
+                name: 'ICBC'
+            }
         }
     };
 

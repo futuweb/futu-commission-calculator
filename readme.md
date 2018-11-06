@@ -39,7 +39,7 @@ console.log('富途美股收费：' , baba.futu , baba.brokers);
 ## calculator(stock [, config , lang])
 * stock 股票配置文件
 * config 自定义券商收费标准
-* lang  语言环境  默认：大陆 ， 支持香港
+* lang  语言环境  默认：大陆 ， 支持香港(hk), 支持欧美(us)
 
 
 ### stock
