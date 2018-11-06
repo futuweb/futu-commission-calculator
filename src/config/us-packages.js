@@ -43,6 +43,27 @@ module.exports = function(lang) {
             tiger:{
                 name:'老虎證券'
             }
+        },
+        us: {
+            futu: {
+                name: 'FUTU',
+                packageList: ['Old Package', 'Package One', 'Package Two']
+            },
+            boci: {
+                name: 'BOCI',
+            },
+            guotaijunan: {
+                name: 'GuotaiJunan',
+            },
+            fs: {
+                name: 'FS'
+            },
+            td: {
+                name: 'TD'
+            },
+            tiger: {
+                name: 'Tiger'
+            }
         }
     };
 
