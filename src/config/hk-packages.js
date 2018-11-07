@@ -46,23 +46,23 @@ module.exports = function( lang ){
         },
         us: {
             futu: {
-                name: 'FUTU',
-                packageList: ['Old Package', 'Package One', 'Package Two']
+                name: 'Futu Securities',
+                packageList: ['Old Package', 'Package one', 'Package two']
             },
             boci: {
-                name: 'BOCI',
+                name: 'BOC International',
             },
             guotaijunan: {
-                name: 'GuotaiJunan',
+                name: 'Guotai Junan Securities',
             },
             cms: {
-                name: 'CMS'
+                name: 'China Merchants Securities'
             },
             guoxin: {
-                name: 'Guoxin'
+                name: 'Guosen Securities'
             },
             icbc: {
-                name: 'ICBC'
+                name: 'Industrial and Commercial Bank of China (Asia)'
             }
         }
     };

@@ -46,23 +46,23 @@ module.exports = function(lang) {
         },
         us: {
             futu: {
-                name: 'FUTU',
-                packageList: ['Old Package', 'Package One', 'Package Two']
+                name: 'Futu Securities',
+                packageList: ['Old package', 'Package one', 'Package two']
             },
             boci: {
-                name: 'BOCI',
+                name: 'BOC International',
             },
             guotaijunan: {
-                name: 'GuotaiJunan',
+                name: 'Guotai Junan Securities',
             },
             fs: {
-                name: 'FS'
+                name: 'Firstrade Securities'
             },
             td: {
-                name: 'TD'
+                name: 'TD(including Scottrade)'
             },
             tiger: {
-                name: 'Tiger'
+                name: 'Tigertrade'
             }
         }
     };
