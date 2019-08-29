@@ -64,8 +64,28 @@ module.exports = class USBroker{
      * @return {[number]}          [平台使用费]
      */
     getPlatform(cost , shareNum){
-        let platformFee = Math.max(this.platformFee , this.platformFeeRate * shareNum , this.minPlatformFee);
-        return Math.max(this.minPlatformFee , Math.min(this.maxPlatformFeeRate * cost , platformFee));
+        if (Object.prototype.toString.call(this.platformFeeRate).slice(8, -1) === 'Object') {
+            let total = 0;
+            const steps = Object.keys(this.platformFeeRate).sort((a, b) => +a - +b);
+            const map = {};
+            for(let i=0; i<steps.length;i++) {
+                if( +shareNum > +steps[i+1]) {
+                    map[steps[i]] = +steps[i+1] - steps[i];
+                } else {
+                    map[steps[i]] = shareNum - steps[i];
+                    break;
+                }
+            }
+            Object.keys(map).forEach(function(key) {
+                total+= this.platformFeeRate[key] * map[key];
+            });
+
+            let platformFee = Math.max(this.minPlatformFee, total);
+            return Math.max(this.minPlatformFee, Math.min(this.maxCommissionRate * cost, platformFee));
+        } else {
+            let platformFee = Math.max(this.platformFee , this.platformFeeRate * shareNum , this.minPlatformFee);
+            return Math.max(this.minPlatformFee , Math.min(this.maxPlatformFeeRate * cost , platformFee));
+        }
     }
     /**
      * [getPayFee 获取交收费]
