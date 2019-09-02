@@ -76,7 +76,7 @@ module.exports = class USBroker{
                     break;
                 }
             }
-            Object.keys(map).forEach(function(key) {
+            Object.keys(map).forEach((key) => {
                 total+= this.platformFeeRate[key] * map[key];
             });
 

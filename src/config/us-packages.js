@@ -74,7 +74,7 @@ module.exports = function(lang) {
             // },
             snowball: {
                 name: 'Snowball Securities',
-                packageList:['LowCommission','LowInterest']
+                packageList:['Low-Commission package','Low-Interest rate package']
             }
         }
     };
