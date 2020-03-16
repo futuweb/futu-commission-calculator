@@ -55,7 +55,7 @@ module.exports = function(lang) {
         us: {
             futu: {
                 name: 'Futu Securities',
-                packageList: ['Old package', 'Package one', 'Package two', 'Stepped package']
+                packageList: ['Old plan', 'Plan one', 'Plan two', 'Tiered plan']
             },
             boci: {
                 name: 'BOC International',
@@ -74,7 +74,7 @@ module.exports = function(lang) {
             // },
             snowball: {
                 name: 'Snowball Securities',
-                packageList:['Low-Commission package','Low-Interest rate package']
+                packageList:['Low-Commission plan','Low-Interest rate plan']
             }
         }
     };

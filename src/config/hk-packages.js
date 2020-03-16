@@ -47,7 +47,7 @@ module.exports = function( lang ){
         us: {
             futu: {
                 name: 'Futu Securities',
-                packageList: ['Old Package', 'Package one', 'Package two']
+                packageList: ['Old plan', 'Plan one', 'Plan two']
             },
             boci: {
                 name: 'BOC International',

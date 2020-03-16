@@ -7,7 +7,7 @@ module.exports = {
     entry:{
         index:'./src/index.js'
     },
-    watch:true,
+    watch:false,
     module:{
         rules:[
         {
