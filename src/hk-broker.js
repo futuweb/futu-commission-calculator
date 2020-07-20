@@ -105,13 +105,13 @@ module.exports = class HKBroker{
      */
     getTotalCostInfo(cost , free , instrument){
         return {
-            commission: +(this.getCommission(cost , free).toFixed(2)),
-            platform: +(this.getPlatform().toFixed(2)),
-            payFee: +(this.getPayFee(cost).toFixed(2)),
-            tradingSystem: +(this.getTradingSystem().toFixed(2)),
-            stampDuty: +(this.getStampDuty(cost , instrument).toFixed(2)),
-            tradeFee: +(this.getTradeFee(cost).toFixed(2)),
-            transactionLevy: +(this.getTransactionLevy(cost).toFixed(2))
+            commission: Math.round(this.getCommission(cost , free) * 100) / 100,
+            platform: Math.round(this.getPlatform() * 100) / 100,
+            payFee: Math.round(this.getPayFee(cost) * 100) / 100,
+            tradingSystem: Math.round(this.getTradingSystem() * 100) / 100,
+            stampDuty: Math.round(this.getStampDuty(cost , instrument) * 100) / 100,
+            tradeFee: Math.round(this.getTradeFee(cost) * 100) / 100,
+            transactionLevy: Math.round(this.getTransactionLevy(cost) * 100) / 100
         };
     }
     /**
@@ -144,7 +144,7 @@ module.exports = class HKBroker{
         let totalCost = 0;
 
         for ( let costName in totalCostInfo ){
-            totalCost += +((totalCostInfo[costName]).toFixed(2));
+            totalCost += totalCostInfo[costName];
         }
         return +(totalCost.toFixed(2));
     }
