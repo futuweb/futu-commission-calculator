@@ -24,21 +24,21 @@
             instrument: 1,
             free:true
         };
-        var babaConfig = {
-            stockCode: 'BABA',
+        var nioConfig = {
+            stockCode: 'NIO',
             market:2,
-            price:15.08,
-            shareNum: 10000,
+            price:40.83,
+            shareNum: 570,
             free: false
         };
 
         var tencent = calculator(tencentConfig);
-        var baba = calculator(babaConfig,'us');
+        var nio = calculator(nioConfig,'us');
 
         console.log('富途港股收费：' , tencent.futu , tencent.brokers);
-        console.log('富途美股收费：' , baba.futu , baba.brokers);
+        console.log('富途美股收费：' , nio.futu , nio.brokers);
         document.getElementById('result').innerHTML = JSON.stringify(tencent.brokers);
-        document.getElementById('result2').innerHTML = JSON.stringify(baba.brokers);
+        document.getElementById('result2').innerHTML = JSON.stringify(nio.brokers);
     </script>
 </body>
 </html>

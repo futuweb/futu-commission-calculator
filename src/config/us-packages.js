@@ -94,7 +94,7 @@ module.exports = function(lang) {
 
             payFeeRate:0.003,//交收费比例
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -114,7 +114,7 @@ module.exports = function(lang) {
             minPlatformFee:1.00, //最少平台使用费
             maxPlatformFeeRate:0.005,//最多平台使用费比例
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -132,7 +132,7 @@ module.exports = function(lang) {
 
             platformFee:0,        //平台使用费
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -163,7 +163,7 @@ module.exports = function(lang) {
             minPlatformFee:1.00, //最少平台使用费
             maxPlatformFeeRate:0.5,//最多平台使用费比例
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -178,7 +178,7 @@ module.exports = function(lang) {
             minCommission:25,  //最少交易佣金
             commissionNeedPrice: true, //计算佣金是否要*股价
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -193,7 +193,7 @@ module.exports = function(lang) {
             minCommission:15,  //最少交易佣金
             commissionNeedPrice: true, //计算佣金是否要*股价
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -208,7 +208,7 @@ module.exports = function(lang) {
             minStockPrice:1.00, //最低股价
             paddingCommission:0.005,//附加佣金
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -221,7 +221,7 @@ module.exports = function(lang) {
         packageList:[{
             minCommission:6.95,  //最少交易佣金
 
-            secFeeRate:0.0000207, //证监会费比例
+            secFeeRate:0.0000221, //证监会费比例
             minSecFee:0.01,//最低证监会费
 
             activityFeeRate:0.000119, //交易活动费比例
@@ -239,7 +239,7 @@ module.exports = function(lang) {
 
     //         payFeeRate:0.003,//交收费比例
 
-    //         secFeeRate:0.0000207, //证监会费比例
+    //         secFeeRate:0.0000221, //证监会费比例
     //         minSecFee:0.01,//最低证监会费
 
     //         activityFeeRate:0.000119, //交易活动费比例

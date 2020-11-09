@@ -2,6 +2,8 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 
 module.exports = {
     entry:{
@@ -31,13 +33,20 @@ module.exports = {
         library:'calculator',
         libraryTarget: 'umd'
     },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                uglifyOptions: {
+                    warnings: false,
+                    compress: {
+                        drop_console: true,
+                        drop_debugger: true
+                    }
+                }
+            })
+        ]
+    },
     plugins:[
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-                drop_console: true,
-            }
-        }),
         new webpack.NoEmitOnErrorsPlugin()
     ]
 };
