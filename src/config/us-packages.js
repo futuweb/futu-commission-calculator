@@ -4,7 +4,7 @@ module.exports = function(lang) {
     var langs = {
         default: {
             futu:{
-                name:'富途证券',
+                name:'富途证券(香港)',
                 packageList:['旧套餐','套餐一','套餐二', '按股梯度式']
             },
             boci:{
@@ -29,7 +29,7 @@ module.exports = function(lang) {
         },
         hk: {
             futu:{
-                name:'富途證券',
+                name:'富途證券(香港)',
                 packageList:['舊套餐','套餐一','套餐二', '按股梯度式']
             },
             boci:{
@@ -54,7 +54,7 @@ module.exports = function(lang) {
         },
         us: {
             futu: {
-                name: 'Futu Securities',
+                name: 'FUTU HK',
                 packageList: ['Old plan', 'Plan one', 'Plan two', 'Tiered plan']
             },
             boci: {
