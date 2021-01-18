@@ -176,7 +176,7 @@ module.exports = function(lang) {
             commissionRate:0.0039,//佣金费用比例
             minCommission:0.99,  //最少交易佣金
             maxCommissionRate:0.5,  //最多交易佣金比例
-
+            minPayFee:0.99, //最少使用交收费
             payFeeRate:0.003841,//交收费比例
 
             platformFeeRate: 0.004,
