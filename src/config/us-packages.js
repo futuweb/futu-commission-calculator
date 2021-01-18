@@ -5,7 +5,7 @@ module.exports = function(lang) {
         default: {
             futu:{
                 name:'富途证券(香港)',
-                packageList:['旧套餐','套餐一','套餐二', '按股梯度式']
+                packageList:['旧套餐','套餐一','套餐二', '按股梯度式','套餐X']
             },
             boci:{
                 name:'中银国际'
@@ -30,7 +30,7 @@ module.exports = function(lang) {
         hk: {
             futu:{
                 name:'富途證券(香港)',
-                packageList:['舊套餐','套餐一','套餐二', '按股梯度式']
+                packageList:['舊套餐','套餐一','套餐二', '按股梯度式','套餐X']
             },
             boci:{
                 name:'中銀國際'
@@ -55,7 +55,7 @@ module.exports = function(lang) {
         us: {
             futu: {
                 name: 'FUTU HK',
-                packageList: ['Old plan', 'Plan one', 'Plan two', 'Tiered plan']
+                packageList: ['Old plan', 'Plan one', 'Plan two', 'Tiered plan', 'Plan X']
             },
             boci: {
                 name: 'BOC International',
@@ -160,6 +160,26 @@ module.exports = function(lang) {
                 1000000: 0.0035,
                 5000000: 0.003,
             },
+            minPlatformFee:1.00, //最少平台使用费
+            maxPlatformFeeRate:0.5,//最多平台使用费比例
+
+            secFeeRate:0.0000221, //证监会费比例
+            minSecFee:0.01,//最低证监会费
+
+            activityFeeRate:0.000119, //交易活动费比例
+            minActivityFee:0.01, //最少交易活动费
+            maxActivityFee:5.95  //最多交易活动费
+        },{
+            packageId:4,          //套餐Id
+            packageName:names.futu.packageList[4],//套餐名称
+
+            commissionRate:0.0039,//佣金费用比例
+            minCommission:0.99,  //最少交易佣金
+            maxCommissionRate:0.5,  //最多交易佣金比例
+
+            payFeeRate:0.003841,//交收费比例
+
+            platformFeeRate: 0.004,
             minPlatformFee:1.00, //最少平台使用费
             maxPlatformFeeRate:0.5,//最多平台使用费比例
 
